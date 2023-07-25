@@ -11,6 +11,6 @@ for row in menus_today:
     print(row.find('span', attrs={'class': 'menuline'}).text,':')
     print("---")
     print(row.find('h2', attrs = {'class': 'menu-title'}).text)
-    description = row.find('p', attrs={'class': 'menu-description'}).text.replace("\n", " ")
+    description = row.find('p', attrs={'class': 'menu-description'}).text.replace("\n", " ").replace("   ", " ").replace("  ", " ")
     print(description)
     print("---")
